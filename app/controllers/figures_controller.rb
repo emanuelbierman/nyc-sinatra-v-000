@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
     erb :'figures/show'
   end
 
-  post '/figures/new' do
+  post '/figures' do
     binding.pry
     @figure = Figure.create(params[:id])
     redirect "figures/#{@figure.id}"
