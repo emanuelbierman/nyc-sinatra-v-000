@@ -15,7 +15,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     binding.pry
-    @figure = Figure.create(params[:figure])
+    @figure = Figure.find_or_create_by(params[:figure])
     redirect "figures/#{@figure.id}"
   end
 
