@@ -2,9 +2,9 @@
 
 <form method="post" action="/figures/<%= @figure.id %>/edit">
   <input type="hidden" name="_method" value="patch">
-
+  <br>
   <input type="text" name="figure[name]" id="figure_name">
-
+  <br>
   <input type="text" name="landmark[name]" id="new_landmark">
 
   <% Title.all.each do |title| %>
