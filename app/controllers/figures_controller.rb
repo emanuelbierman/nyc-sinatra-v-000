@@ -15,7 +15,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     binding.pry
-    @figure = Figure.create(params[:id])
+    @figure = Figure.create(params[:figure])
     redirect "figures/#{@figure.id}"
   end
 
