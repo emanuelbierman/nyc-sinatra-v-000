@@ -4,7 +4,7 @@
   <input type="hidden" name="_method" value="patch">
   <input type="text" name="figure[name]" id="figure_name" placeholder="<%= @figure.name %>">
   <br>
-  <input type="text" name="landmark[name]" id="new_landmark" placeholder="<%= @figure.landmark.name unless @figure.landmark == nil %>">
+  <input type="text" name="landmark[name]" id="new_landmark" placeholder="<%= @figure.landmark.name ? @figure.landmark :  %>">
   <br>
   <p>Titles:</p>
   <% Title.all.each do |title| %>
